@@ -1,6 +1,6 @@
 %define		pname	glib-java
 Summary:	Java interface for Glib library
-Summary(pl):	Wrapper Java dla biblioteki Glib
+Summary(pl):	Wrapper Javy dla biblioteki Glib
 Name:		java-glib
 Version:	0.2.0
 Release:	1
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Java interface for the Glib library.
 
 %description -l pl
-Wrapper Java dla biblioteki Glib.
+Wrapper Javy dla biblioteki Glib.
 
 %package devel
 Summary:	Header files for java-glib library
@@ -71,8 +71,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libglibjava.so
 %attr(755,root,root) %{_libdir}/libglibjni.so
+%{_libdir}/*.la
 %{_datadir}/%{pname}
+%dir %{_includedir}/%{pname}
 %{_includedir}/%{pname}/*.h
 %{_javadir}/*.jar
-%{_libdir}/*.la
 %{_pkgconfigdir}/*.pc
