@@ -12,7 +12,7 @@ URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	glib2-devel >= 2.8.0
+BuildRequires:	glib2-devel >= 1:2.8.0
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,6 +27,7 @@ Summary:	Header files for java-glib library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-glib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	glib2-devel >= 1:2.8.0
 
 %description devel
 Header files for java-glib library.
