@@ -4,14 +4,13 @@ Summary(pl):	Wrapper Java dla biblioteki Glib
 Name:		java-glib
 Version:	0.2.0
 Release:	1
-License:	LGPL
+License:	GPL v2
 Group:		Libraries
 Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
 # Source0-md5:	252abc8cdb4980d5b0c79fe05050de2c
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	docbook-utils
 BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	glib2-devel >= 2.8.0
 BuildRequires:	libtool
