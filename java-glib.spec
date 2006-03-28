@@ -2,12 +2,12 @@
 Summary:	Java interface for Glib library
 Summary(pl):	Wrapper Javy dla biblioteki Glib
 Name:		java-glib
-Version:	0.2.2
+Version:	0.2.4
 Release:	1
 License:	GPL v2
 Group:		Libraries
 Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
-# Source0-md5:	46052b2c2aed6698275c54b7bd51cb38
+# Source0-md5:	12b6a077b927175c182109fc60d57b7f
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -44,7 +44,7 @@ Pliki nag³ówkowe biblioteki java-glib.
 %{__automake}
 %{__autoconf}
 %configure \
-	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar` \
+	JAR=%{_bindir}/fastjar \
 	--without-javadocs
 %{__make}
 
