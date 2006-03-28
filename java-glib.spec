@@ -44,6 +44,7 @@ Pliki nag³ówkowe biblioteki java-glib.
 %{__automake}
 %{__autoconf}
 %configure \
+	GCJFLAGS="%{rpmcflags}" \
 	JAR=%{_bindir}/fastjar \
 	--without-javadocs
 %{__make}
