@@ -3,7 +3,7 @@ Summary:	Java interface for Glib library
 Summary(pl):	Wrapper Javy dla biblioteki Glib
 Name:		java-glib
 Version:	0.2.4
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Libraries
 Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
