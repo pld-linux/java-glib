@@ -2,17 +2,18 @@
 Summary:	Java interface for Glib library
 Summary(pl):	Wrapper Javy dla biblioteki Glib
 Name:		java-glib
-Version:	0.2.4
-Release:	2
+Version:	0.3.1
+Release:	1
 License:	GPL v2
 Group:		Libraries
-Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
-# Source0-md5:	12b6a077b927175c182109fc60d57b7f
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/glib-java/0.3/%{pname}-%{version}.tar.gz
+# Source0-md5:	28cff0d1a6836d8901c161ebcc5a35b8
+Source1:	%{name}-glib_java.h
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	glib2-devel >= 1:2.8.0
+BuildRequires:	glib2-devel >= 1:2.12.1
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,7 +28,7 @@ Summary:	Header files for java-glib library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-glib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.8.0
+Requires:	glib2-devel >= 1:2.12.1
 
 %description devel
 Header files for java-glib library.
@@ -37,6 +38,8 @@ Pliki nag³ówkowe biblioteki java-glib.
 
 %prep
 %setup -q -n %{pname}-%{version}
+
+cp %{SOURCE1} src/jni/glib_java.h
 
 %build
 %{__libtoolize}
@@ -66,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%attr(755,root,root) %{_libdir}/libglib*-0.2.so
+%attr(755,root,root) %{_libdir}/libglib*-0.4.so
 
 %files devel
 %defattr(644,root,root,755)
@@ -74,7 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libglibjni.so
 %{_libdir}/*.la
 %{_datadir}/%{pname}
-%dir %{_includedir}/%{pname}
-%{_includedir}/%{pname}/*.h
+%{_includedir}/%{pname}
 %{_javadir}/*.jar
 %{_pkgconfigdir}/*.pc
