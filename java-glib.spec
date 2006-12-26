@@ -2,17 +2,17 @@
 Summary:	Java interface for Glib library
 Summary(pl):	Wrapper Javy dla biblioteki Glib
 Name:		java-glib
-Version:	0.4.0
+Version:	0.4.1
 Release:	1
 License:	GPL v2
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/glib-java/0.4/%{pname}-%{version}.tar.gz
-# Source0-md5:	9210014da827f99b18fa1f57cc822ce4
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/glib-java/0.4/%{pname}-%{version}.tar.bz2
+# Source0-md5:	52b8f86f4689daab0aac4de94191ff1c
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	glib2-devel >= 1:2.12.4
+BuildRequires:	glib2-devel >= 1:2.12.6
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,7 +27,7 @@ Summary:	Header files for java-glib library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-glib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.12.4
+Requires:	glib2-devel >= 1:2.12.6
 
 %description devel
 Header files for java-glib library.
@@ -45,7 +45,6 @@ Pliki nag³ówkowe biblioteki java-glib.
 %{__autoconf}
 %configure \
 	GCJFLAGS="%{rpmcflags}" \
-	JAR=%{_bindir}/fastjar \
 	--without-javadocs
 %{__make}
 
