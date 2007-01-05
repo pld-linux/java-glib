@@ -14,6 +14,7 @@ BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	glib2-devel >= 1:2.12.6
 BuildRequires:	libtool
+BuildRequires:	zip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
