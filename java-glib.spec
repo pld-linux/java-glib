@@ -1,6 +1,6 @@
 %define		pname	glib-java
 Summary:	Java interface for Glib library
-Summary(pl):	Wrapper Javy dla biblioteki Glib
+Summary(pl.UTF-8):   Wrapper Javy dla biblioteki Glib
 Name:		java-glib
 Version:	0.4.2
 Release:	1
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Java interface for the Glib library.
 
-%description -l pl
+%description -l pl.UTF-8
 Wrapper Javy dla biblioteki Glib.
 
 %package devel
 Summary:	Header files for java-glib library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki java-glib
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki java-glib
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 1:2.12.7
@@ -33,8 +33,8 @@ Requires:	glib2-devel >= 1:2.12.7
 %description devel
 Header files for java-glib library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki java-glib.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki java-glib.
 
 %prep
 %setup -q -n %{pname}-%{version}
