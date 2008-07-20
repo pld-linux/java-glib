@@ -3,7 +3,7 @@ Summary:	Java interface for Glib library
 Summary(pl.UTF-8):	Wrapper Javy dla biblioteki Glib
 Name:		java-glib
 Version:	0.4.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/glib-java/0.4/%{pname}-%{version}.tar.bz2
@@ -13,6 +13,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	glib2-devel >= 1:2.12.7
+BuildRequires:	jar
 BuildRequires:	libtool
 BuildRequires:	zip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
