@@ -5,7 +5,7 @@ Name:		java-glib
 Version:	0.4.2
 Release:	2
 License:	GPL v2
-Group:		Libraries
+Group:		Libraries/Java
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/glib-java/0.4/%{pname}-%{version}.tar.bz2
 # Source0-md5:	8820119f7d44f8890cd56007c264a16a
 URL:		http://java-gnome.sourceforge.net/
